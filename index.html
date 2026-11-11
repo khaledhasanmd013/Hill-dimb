@@ -1,0 +1,63 @@
+
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pro Hill Climb Racing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="game-wrapper">
+  <header>
+    <h2>🏁 PRO HILL CLIMB</h2>
+    <div class="stats">
+      <span>🪙 <b id="coins">0</b></span>
+      <span>🏆 <b id="score">0</b> m</span>
+      <span>⛽ <b id="fuelText">100</b>%</span>
+    </div>
+    <div class="fuel-track">
+      <div id="fuelBar"></div>
+    </div>
+  </header>
+
+  <main id="game-area">
+    <canvas id="gameCanvas" width="900" height="500"></canvas>
+
+    <div id="startScreen" class="overlay">
+      <h1>🚙 HILL CLIMB</h1>
+      <p>পাহাড় জয় করো, কয়েন সংগ্রহ করো!</p>
+      <button id="startBtn">START GAME</button>
+    </div>
+
+    <div id="gameOver" class="overlay hidden">
+      <h1>GAME OVER!</h1>
+      <p>দূরত্ব: <b id="finalScore">0</b> m</p>
+      <button id="restartBtn">PLAY AGAIN</button>
+    </div>
+
+    <button id="pauseBtn">Ⅱ</button>
+  </main>
+
+  <section class="controls">
+    <button id="brakeBtn">◀ BRAKE</button>
+    <button id="gasBtn">GAS ▶</button>
+  </section>
+
+  <section class="garage">
+    <h3>🔧 GARAGE & UPGRADES</h3>
+    <div class="upgrades">
+      <button id="engineBtn">⚡ Engine <span id="engineLevel">1</span></button>
+      <button id="tireBtn">🛞 Tires <span id="tireLevel">1</span></button>
+      <button id="fuelBtn">⛽ Fuel <span id="tankLevel">1</span></button>
+    </div>
+    <p>প্রতিটি আপগ্রেডের দাম: <b id="upgradeCost">200</b> কয়েন</p>
+  </section>
+
+  <footer>PRO HILL CLIMB RACING © 2026</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
