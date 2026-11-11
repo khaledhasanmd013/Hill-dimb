@@ -1,0 +1,200 @@
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: radial-gradient(circle, #243b55, #090e18);
+  color: white;
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px;
+}
+
+#game-wrapper {
+  width: min(100%, 950px);
+  background: #172333;
+  border: 2px solid #34495e;
+  border-radius: 15px;
+  padding: 12px;
+  box-shadow: 0 10px 40px #0009;
+  text-align: center;
+}
+
+header {
+  background: #101923;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+header h2 {
+  color: #f1c40f;
+  margin-bottom: 12px;
+}
+
+.stats {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 15px;
+  color: #f1c40f;
+}
+
+.fuel-track {
+  height: 12px;
+  background: #333;
+  border-radius: 20px;
+  margin-top: 12px;
+  overflow: hidden;
+}
+
+#fuelBar {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #e74c3c, #2ecc71);
+  transition: width .15s;
+}
+
+#game-area {
+  position: relative;
+  margin-top: 12px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(#2980b9, #a9dff5);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: #000c;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  z-index: 3;
+}
+
+.overlay h1 {
+  color: #f1c40f;
+  font-size: clamp(24px, 5vw, 42px);
+}
+
+.overlay button {
+  background: #27ae60;
+  padding: 13px 30px;
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none !important;
+}
+
+#pauseBtn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  border: 0;
+  border-radius: 8px;
+  background: #101923cc;
+  color: white;
+  padding: 10px 16px;
+  z-index: 2;
+  font-size: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.control-btn,
+.controls button {
+  flex: 1;
+  padding: 18px 8px;
+  background: linear-gradient(#3498db, #1c5f91);
+  border: 0;
+  border-radius: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  touch-action: none;
+  user-select: none;
+}
+
+.controls button:active {
+  transform: scale(.96);
+}
+
+.garage {
+  margin-top: 15px;
+  background: #101923;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+.garage h3 {
+  color: #f1c40f;
+  margin-bottom: 12px;
+}
+
+.upgrades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.upgrades button {
+  flex: 1;
+  min-width: 100px;
+  padding: 12px 5px;
+  background: #34495e;
+  color: white;
+  border: 1px solid #5d7185;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.garage p {
+  margin-top: 12px;
+  font-size: 13px;
+  color: #ccc;
+}
+
+footer {
+  color: #8194a7;
+  margin-top: 15px;
+  font-size: 12px;
+}
+
+@media(max-width: 500px) {
+  body {
+    padding: 4px;
+  }
+
+  #game-wrapper {
+    padding: 6px;
+  }
+
+  .controls button {
+    padding: 20px 4px;
+    font-size: 13px;
+  }
+}
